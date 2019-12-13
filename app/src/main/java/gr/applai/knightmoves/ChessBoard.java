@@ -1,4 +1,4 @@
-package gr.applai.chessknight;
+package gr.applai.knightmoves;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,7 +64,8 @@ public class ChessBoard {
                 newPath.add(newPoint);
 
                 if (newPoint.equals(target)) {
-                    if (count==steps) // don't count the target point as a step, we need it as a point
+                    if (count<=steps) // don't count the target point as a step, we need it as a point
+//                    if (count==steps) // use this line instead to count only only the exact steps solutions
                         solutions.add(newPath);
                 } else {
                     findTarget(solutions, newPoint, newPath);

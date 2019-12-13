@@ -1,4 +1,4 @@
-package gr.applai.chessknight;
+package gr.applai.knightmoves;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,7 +22,6 @@ public class ChessboardActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_chessboard);
 
         mChessboardView = findViewById(R.id.chessboard);

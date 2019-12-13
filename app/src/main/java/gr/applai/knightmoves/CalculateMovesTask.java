@@ -1,4 +1,4 @@
-package gr.applai.chessknight;
+package gr.applai.knightmoves;
 
 import android.app.Activity;
 import android.os.AsyncTask;

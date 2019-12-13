@@ -65,7 +65,7 @@
             style="@style/settingsFont"
             android:text="Set Knight -> Target"
             />
-        <gr.applai.chessknight.ChessView
+        <gr.applai.knightmoves.ChessView
             android:id="@+id/boardToSelect"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

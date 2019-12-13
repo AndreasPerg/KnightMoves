@@ -1,6 +1,7 @@
-package gr.applai.chessknight;
+package gr.applai.knightmoves;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -33,13 +34,29 @@ public final class ChessView extends View {
     /** 'true' if black is facing player. */
     private boolean flipped = false;
     private Date timeOfPreviousTouch;
+    private boolean touchEnabled;
 
     public ChessView(final Context context, final AttributeSet attrs) {
         super(context, attrs);
+        init(attrs, context);
 
         setFocusable(true);
 
-        setDimensions(8,8);
+        setDimensions(cols,rows);
+    }
+
+    private void init(AttributeSet attrs, Context context){
+        // do your other View related stuff here //
+
+
+        TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.ChessView, 0, 0);
+        try {
+            touchEnabled = a.getBoolean(R.styleable.ChessView_touchEnabled, true);
+        } finally {
+            a.recycle();
+        }
+
+        // and other stuff here //
     }
 
     private void buildTiles() {
@@ -206,6 +223,8 @@ public final class ChessView extends View {
 
     @Override
     public boolean onTouchEvent(final MotionEvent event) {
+        if (!touchEnabled) return false;
+
         final int x = (int) event.getX();
         final int y = (int) event.getY();
 

@@ -1,7 +1,6 @@
-package gr.applai.chessknight;
+package gr.applai.knightmoves;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -73,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements SeekBar.OnSeekBar
 
         mSizeLabelView.setText("Board size: " + state.boardSize);
         mBoardToSelectView.setDimensions(state.boardSize, state.boardSize);
-        mStepsLabelView.setText("Steps: " + state.steps);
+        mStepsLabelView.setText("Max steps: " + state.steps);
 
         mSizeView.setProgress(state.boardSize);
         mStepsView.setProgress(state.steps);
