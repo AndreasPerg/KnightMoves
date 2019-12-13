@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="steps">3</integer>
+    <integer name="min_steps">2</integer>
+    <integer name="max_steps">10</integer>
+
+    <integer name="boardSize">8</integer>
+    <integer name="min_boardSide">6</integer>
+    <integer name="max_boardSide">16</integer>
+</resources>
